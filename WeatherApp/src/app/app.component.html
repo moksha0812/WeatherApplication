@@ -1,0 +1,29 @@
+<div style="text-align:center">
+  <h1>Weather Application</h1>
+  <input [(ngModel)]="city" placeholder="Enter city name" />
+  <button (click)="getWeather()">Get Current Weather</button>
+  <button (click)="getForecast()">Get 5-Day Forecast</button>
+  <button (click)="getAirQuality()">Get Air Quality</button>
+</div>
+
+<div style="text-align:center">
+  <h1>Weather Information</h1>
+  <label for="pincode">Enter Pincode:</label>
+  <input type="text" id="pincode" [(ngModel)]="pincode" />
+  <button (click)="getWeatherByPincode()">Get Weather by Pincode</button>
+</div>
+
+<div style="text-align:center" *ngIf="validationError">
+  <p style="color:red">{{ validationError }}</p>
+</div>
+
+<div style="text-align:center" *ngIf="errorMessage && !validationError">
+  <p style="color:red">{{ errorMessage }}</p>
+</div>
+
+<div style="text-align:center">
+  <app-current-weather [weatherData]="currentWeather"></app-current-weather>
+  <app-weather-forecast [forecastData]="weatherForecast"></app-weather-forecast>
+  <app-air-quality [airQualityData]="airQuality"></app-air-quality>
+  <app-weather-by-pincode *ngIf="showWeather" [pincode]="pincode"></app-weather-by-pincode>
+</div>

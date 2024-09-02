@@ -1,0 +1,8 @@
+<div *ngIf="forecastData" style="display: auto;">
+    <h2>5-Day Forecast for {{ forecastData.city.name }}</h2>
+    <div *ngFor="let forecast of forecastData.list" style="margin-bottom: 10px;">
+      <p><strong>Date:</strong> {{ forecast.dt_txt }}</p>
+      <p><strong>Temperature:</strong> {{ forecast.main.temp }} °C</p>
+    </div>
+  </div>
+  

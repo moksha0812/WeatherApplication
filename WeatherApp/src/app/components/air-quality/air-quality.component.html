@@ -1,0 +1,19 @@
+<div *ngIf="airQualityData && airQualityData.list && airQualityData.list.length > 0">
+    <h2>Air Quality</h2>
+    <p>Latitude: {{ airQualityData.coord.lat }}</p>
+    <p>Longitude: {{ airQualityData.coord.lon }}</p>
+    <p>AQI: {{ airQualityData.list[0].main.aqi }}</p>
+    <p>CO: {{ airQualityData.list[0].components.co }} µg/m³</p>
+    <p>NO: {{ airQualityData.list[0].components.no }} µg/m³</p>
+    <p>NO2: {{ airQualityData.list[0].components.no2 }} µg/m³</p>
+    <p>O3: {{ airQualityData.list[0].components.o3 }} µg/m³</p>
+    <p>SO2: {{ airQualityData.list[0].components.so2 }} µg/m³</p>
+    <p>PM2.5: {{ airQualityData.list[0].components.pm2_5 }} µg/m³</p>
+    <p>PM10: {{ airQualityData.list[0].components.pm10 }} µg/m³</p>
+    <p>NH3: {{ airQualityData.list[0].components.nh3 }} µg/m³</p>
+  </div>
+  
+  <!-- <div *ngIf="!airQualityData || airQualityData.list.length === 0">
+    <p>Loading air quality data...</p>
+  </div> -->
+  

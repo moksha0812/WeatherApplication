@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "cpW1GLj0p2AYStWzRRyRFG6CfsATYjNjmv3yqEED/xc=",
+  "Source": "OpenweatherWebApi",
+  "BasePath": "_content/OpenweatherWebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
